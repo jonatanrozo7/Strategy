@@ -1,0 +1,30 @@
+nombre: Java CI
+
+Sobre:
+  Empuja:
+    Ramas: [ "Principal" ]
+  pull_request:
+    Ramas: [ "Principal" ]
+
+Empleos:
+  Build:
+    Funciona: Ubuntu-Latest
+
+    Pasos:
+    - nombre: Repositorio de préstamo
+      Usos: acciones/checkout@v3
+
+    - nombre: Crear JDK 11
+      Usos: acciones/preparación-java@v3
+      con:
+        Distribución: 'Temurin'
+        Versión Java: '11'
+        
+    - nombre: Limpiar versiones anteriores
+      run: find . -name "*.class" -tipo f -delete
+      
+    - nombre: Compile Java
+      RUN: Java Principal.java EstrategiaCarrera.java EstrategiaCarreraPorTerreno.java SelectorEstrategiaCarrera.java Atleta.java Tenis.java Terreno.java Duracion.java Hidratacion.java
+
+    - nombre: Run Principal
+      run: java Principal
