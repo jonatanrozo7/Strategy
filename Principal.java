@@ -26,7 +26,8 @@ public class Principal {
 
         System.out.println("Sensación del atleta: " +
                 terrenoElegido1.duracionCorta.hidratacionMucha.getSensacion());
-        System.out.println("Energía restante del atleta: " + atleta1.getEnergia())
+        System.out.println("Energía restante del atleta: " + atleta1.getEnergia());
+        System.out.println(atleta1.getEnergia() > 0 ? "Terminó la carrera" : "No terminó la carrera");
 
 
         // ===== ATLETA 2 =====
@@ -45,6 +46,7 @@ public class Principal {
         System.out.println("Sensación del atleta: " +
                 terrenoElegido2.duracionMedia.hidratacionNormal.getSensacion());
         System.out.println("Energía restante del atleta: " + atleta2.getEnergia());
+        System.out.println(atleta2.getEnergia() > 0 ? "Terminó la carrera" : "No terminó la carrera");
 
 
         // ===== ATLETA 3 =====
@@ -63,15 +65,6 @@ public class Principal {
         System.out.println("Sensación del atleta: " +
                 terrenoElegido3.duracionLarga.hidratacionNinguna.getSensacion());
         System.out.println("Energía restante del atleta: " + atleta3.getEnergia());
+        System.out.println(atleta3.getEnergia() > 0 ? "Terminó la carrera" : "No terminó la carrera");
     }
 }
-
-
-
-
-
-
-
-
-
-
